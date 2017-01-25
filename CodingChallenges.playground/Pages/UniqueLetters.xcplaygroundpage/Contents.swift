@@ -3,7 +3,7 @@
 import Foundation
 import UIKit
 
-//: Are letters Unique
+//: ### Are letters Unique
 
 // MARK: - Loop version - O(n) due to contains
 
@@ -36,3 +36,5 @@ assert(isUniqueTakeTwo(input: "abcdefghijk") == true) // should be true
 assert(isUniqueTakeTwo(input: "aabcdefghijk") == false) // should be false
 assert(isUniqueTakeTwo(input: "AbCdefghijk") == true) // should be true
 assert(isUniqueTakeTwo(input: "AACdefghijk") == false) // should be false
+
+//: [Next](@next)
