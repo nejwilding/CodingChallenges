@@ -44,4 +44,26 @@ assert(stringyTakeTwo(6) == "101010")
 assert(stringyTakeTwo(12) == "101010101010")
 assert(stringyTakeTwo(20) == "10101010101010101010")
 
+
+
+/*:
+### Mumbling Letters
+
+Write a function accum that takes a String and returns the letters in Title case of the String
+ charachter and a count of charachters for the place the charachter is in the String.
+
+A string of 'abcd' return :'A-Bb-Cccc-Dddd'
+*/
+func accum(_ s: String) -> String {
+    let values = s.characters.enumerated().map({ (index, element) in
+        return String(repeating: String(element), count: index + 1).capitalized
+    }).joined(separator: "-")
+    return values
+}
+
+// MARK: - Tests
+assert(accum("abcd") == "A-Bb-Ccc-Dddd")
+assert(accum("RqaEzty") ==  "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy")
+assert(accum("cwAt") ==  "C-Ww-Aaa-Tttt")
+
 //: [Next](@next)
